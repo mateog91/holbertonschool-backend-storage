@@ -6,5 +6,6 @@
 --     Your script can be executed on any database
 
 -- SELECT band_name, DATEDIFF(split, formed) AS lifespan FROM metal_bands;
-SELECT band_name, IF(split IS NULL, 2020, split) - formed AS lifespan FROM metal_bands ORDER BY lifespan DESC;
+-- SELECT band_name, IF(split IS NULL, 2020, split) - formed AS lifespan FROM metal_bands ORDER BY lifespan DESC;
 -- SELECT ISNULL(split, YEAR('2020')) LIKE '%' FROM metal_bands;
+SELECT band_name, ISNULL(split, 2020) - formed AS lifespan FROM metal_bands ORDER BY lifespan DESC;
