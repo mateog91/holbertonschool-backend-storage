@@ -23,7 +23,6 @@ def top_students(mongo_collection):
         average_score = float(sum(scores) / len(scores))
         student['averageScore'] = average_score
         l_students.append(student)
-        print(l_students)
 
     top_students = sorted(l_students, key=itemgetter(
         'averageScore'), reverse=True)
