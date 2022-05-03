@@ -20,9 +20,9 @@ if __name__ == "__main__":
     count_status = nginx_collection.count_documents({"path":"/status"})
 
     # Prints
-    print(f"{number_of_logs} logs")
+    print("{} logs".format(number_of_logs))
     print("Methods:")
     # number_of_documents = len(documents)
     for method, count in zip(methods, count_by_methods):
-        print(f"    method {method}: {count}")
-    print(f"{count_status} status check")
+        print("    method {}: {}".format(method, count))
+    print("{} status check".format(count_status))
