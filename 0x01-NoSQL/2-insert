@@ -1,3 +1,4 @@
 // my comment
+db.createCollection('school')
 school = {name: "Holberton school"}
-db.my_db.insert(school)
+db.school.insert(school)
