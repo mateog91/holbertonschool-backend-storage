@@ -14,8 +14,11 @@ def list_all(mongo_collection):
         Return a list with all documents in a collection.
         Return an empty list if no document in the collection
     """
-    lst = list(mongo_collection.find())
-    if not lst:
-        return []
+    return mongo_collection.find()
 
-    return lst
+if __name__ == "__main__":
+    client = MongoClient('mongodb://127.0.0.1:27017')
+    school_collection = client.my_db.school
+    schools = list_all(school_collection)
+    for school in schools:
+        print("[{}] {}".format(school.get('_id'), school.get('name')))
