@@ -24,5 +24,5 @@ if __name__ == "__main__":
     print("Methods:")
     # number_of_documents = len(documents)
     for method, count in zip(methods, count_by_methods):
-        print("    method {}: {}".format(method, count))
+        print("\tmethod {}: {}".format(method, count))
     print("{} status check".format(count_status))
