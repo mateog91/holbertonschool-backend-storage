@@ -55,4 +55,3 @@ if __name__ == "__main__":
         current_ip = ips_tupple[i]
         ip, count = current_ip[0], current_ip[1]
         print("\t{}:{}".format(ip, count))
-
