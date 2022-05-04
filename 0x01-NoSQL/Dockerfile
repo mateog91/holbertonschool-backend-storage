@@ -1,0 +1,4 @@
+FROM mongo:4.2
+
+
+WORKDIR /0x01-NoSQL
