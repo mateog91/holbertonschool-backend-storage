@@ -47,12 +47,15 @@ if __name__ == "__main__":
     ips_tupple = list(ips_dict.items())
     # Sort list by counts
     ips_tupple.sort(key=lambda x: x[1], reverse=True)
-    final_list = ips_tupple[0:10]
+    # ips_tupple = ips_tupple[0:3]
     # final_list[0], final_list[1], final_list[2] = \
     #     final_list[2], final_list[0], final_list[1]
     # Print
     print("IPs:")
-    for i in range(10):
-        current_ip = final_list[i]
+    len_list = len(ips_tupple)
+    if len_list > 10:
+        len_list = 10
+    for i in range(len_list):
+        current_ip = ips_tupple[i]
         ip, count = current_ip[0], current_ip[1]
         print("\t{}: {}".format(ip, count))
