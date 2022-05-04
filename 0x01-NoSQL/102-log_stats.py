@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-""" Module for task 12 """
-from typing import final
+""" Module for task 102 """
 from pymongo import MongoClient
 
 if __name__ == "__main__":
