@@ -48,8 +48,8 @@ if __name__ == "__main__":
     # Sort list by counts
     ips_tupple.sort(key=lambda x: x[1], reverse=True)
     final_list = ips_tupple[0:10]
-    final_list[0], final_list[1], final_list[2] = \
-        final_list[2], final_list[0], final_list[1]
+    # final_list[0], final_list[1], final_list[2] = \
+    #     final_list[2], final_list[0], final_list[1]
     # Print
     print("IPs:")
     for i in range(10):
