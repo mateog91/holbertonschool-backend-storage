@@ -15,9 +15,10 @@ if __name__ == "__main__":
 
     # Get count by methods
 
-    count_by_methods = [nginx_collection.count_documents({"method": method}) for method in methods]
+    count_by_methods = [nginx_collection.count_documents(
+        {"method": method}) for method in methods]
 
-    count_status = nginx_collection.count_documents({"path":"/status"})
+    count_status = nginx_collection.count_documents({"path": "/status"})
 
     # Prints
     print("{} logs".format(number_of_logs))
