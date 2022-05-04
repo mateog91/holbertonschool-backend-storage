@@ -12,11 +12,8 @@ class Cache():
 
     def __init__(self):
         """Class constructor"""
-        try:
-            self._redis = redis.Redis()
-            self._redis.flushdb
-        except Exception as e:
-            print(e)
+        self._redis = redis.Redis()
+        self._redis.flushdb
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """
