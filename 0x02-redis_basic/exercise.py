@@ -25,6 +25,6 @@ class Cache():
         Returns:
             str: uuid key generated where data was stored
         """
-        key = str(uuid.uuid1())
+        key = str(uuid.uuid4())
         self._redis.set(key, data)
         return key
