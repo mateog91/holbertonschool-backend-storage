@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """Module for task 0"""
 import redis
-from typing import Union
 import uuid
+from typing import Union
 
 
 class Cache():
     """
     Cache class
     """
+
     def __init__(self):
         """Class constructor"""
         try:
