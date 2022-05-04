@@ -3,20 +3,31 @@
 import redis
 from typing import Union
 import uuid
-redis_host = 'localhost'
-redis_port = 6379
 
 
 class Cache():
+    """
+    Cache class
+    """
     def __init__(self):
+        """Class constructor"""
         try:
             self._redis = redis.Redis(
-                host=redis_host, port=redis_port, decode_responses=True)
+                host='localhost', port=6379, decode_responses=True)
             self._redis.flushdb
         except Exception as e:
             print(e)
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
+        """
+        store stores data into redis
+
+        Args:
+            data (Union[str, bytes, int, float]): data to store
+
+        Returns:
+            str: uuid key generated where data was stored
+        """
         key = str(uuid.uuid1())
         self._redis.set(key, data)
         return key
